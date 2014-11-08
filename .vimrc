@@ -20,7 +20,7 @@ nnoremap <C-h> :noh<return>
 " Activate line numbering by default
 :set number
 
-" Set maximum column width
+" Set maximum column width (for ultrabook about 170 columns is maxwidth)
 :set columns=120
 
 " Set status line and format status line 
