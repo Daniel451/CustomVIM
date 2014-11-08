@@ -11,10 +11,25 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
 " Refactoring -> change/replace name for global variables
-nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+nnoremap gR *:%s/<C-R>///gc<left><left><left>
+
+" unhighlight all highlighted things (e.g. search results)
+" -> perform :noh return
+nnoremap <C-h> :noh<return>
 
 " Activate line numbering by default
 :set number
+
+" Set maximum column width
+:set columns=120
+
+" Set status line and format status line 
+:set laststatus=2
+:set statusline=\ [%.80F]\ [type:\ %Y]\ [buffer:\ %n]\ [charcode:\ %4b]%=[col\ %c]\ [line\ %l\ of\ %L]\ [%p%%]\ 
+
+" Set amount of lines to scroll then pressing Ctrl+D (scroll down)
+" or Ctrl+U (scroll up)
+:set scroll=5
 
 " highlighting for search results, cancel with :noh
 set hlsearch
