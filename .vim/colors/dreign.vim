@@ -38,7 +38,7 @@ hi Todo guifg=#00ffe0 guibg=#0080a0 guisp=#0080a0 gui=NONE ctermfg=50 ctermbg=31
 hi Special guifg=#eb7d34 guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
 hi LineNr guifg=#ffffff guibg=#04030f guisp=#130e38 gui=NONE ctermfg=15 ctermbg=4 cterm=NONE
 hi StatusLine guifg=#000000 guibg=#c8c8d8 guisp=#c8c8d8 gui=NONE ctermfg=16 ctermbg=146 cterm=NONE
-hi Normal guifg=#ffffff guibg=#0a0a0a guisp=#0a0a0a gui=NONE ctermfg=15 ctermbg=23 cterm=NONE
+hi Normal guifg=#ffffff guibg=#0a0a0a guisp=#0a0a0a gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Label guifg=#bbaaff guibg=NONE guisp=NONE gui=NONE ctermfg=147 ctermbg=NONE cterm=NONE
 "hi CTagsImport -- no settings --
 hi PMenuSel guifg=#000000 guibg=#c8c8d8 guisp=#c8c8d8 gui=NONE ctermfg=NONE ctermbg=16 cterm=NONE
@@ -54,7 +54,8 @@ hi Float guifg=#b8b8c8 guibg=NONE guisp=NONE gui=NONE ctermfg=251 ctermbg=NONE c
 hi Number guifg=#ff1f1f guibg=NONE guisp=NONE gui=NONE ctermfg=196 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#00d8f8 guibg=NONE guisp=NONE gui=NONE ctermfg=45 ctermbg=NONE cterm=NONE
 hi Operator guifg=#bbaaff guibg=NONE guisp=NONE gui=NONE ctermfg=147 ctermbg=NONE cterm=NONE
-"hi CursorLine -- no settings --
+hi CursorLine guifg=#ffffff guibg=#5c5c5c guisp=#5c5c5c gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
+hi CursorColumn guifg=#ffffff guibg=#5c5c5c guisp=#5c5c5c gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
 "hi Union -- no settings --
 "hi TabLineFill -- no settings --
 hi Question guifg=#d0d050 guibg=NONE guisp=NONE gui=NONE ctermfg=185 ctermbg=NONE cterm=NONE
@@ -62,7 +63,6 @@ hi WarningMsg guifg=#ffffff guibg=#f00080 guisp=#f00080 gui=NONE ctermfg=15 cter
 "hi VisualNOS -- no settings --
 hi DiffDelete guifg=#ffffff guibg=#40a060 guisp=#40a060 gui=NONE ctermfg=10 ctermbg=17 cterm=NONE
 hi ModeMsg guifg=#00e0ff guibg=NONE guisp=NONE gui=NONE ctermfg=45 ctermbg=NONE cterm=NONE
-"hi CursorColumn -- no settings --
 hi Define guifg=#40ffa0 guibg=NONE guisp=NONE gui=NONE ctermfg=85 ctermbg=NONE cterm=NONE
 hi Function guifg=#ffa0ff guibg=NONE guisp=NONE gui=NONE ctermfg=219 ctermbg=NONE cterm=NONE
 hi FoldColumn guifg=#c0a0ff guibg=#404052 guisp=#404052 gui=NONE ctermfg=183 ctermbg=239 cterm=NONE
