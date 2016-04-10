@@ -7,6 +7,18 @@
 
 
 " =========================================================
+" = Plugin-Installer: Pathogen                            =
+" =========================================================
+
+execute pathogen#infect()
+filetype plugin indent on
+set sessionoptions-=options
+
+" ---------------------------------------------------------
+
+
+
+" =========================================================
 " = General settings                                      =
 " =========================================================
 
@@ -24,6 +36,9 @@ set shiftwidth=4
 set expandtab
 set smarttab
 
+" encoding
+:set tenc=utf8
+
 " undo history size
 set undolevels=1000
 
@@ -35,7 +50,8 @@ set cindent
 :set number
 
 " Set maximum column width (for ultrabook about 170 columns is maxwidth)
-:set columns=120
+" This is bugged when using tmux with multiple/split panes
+":set columns=80
 
 " Set status line and format status line 
 :set laststatus=2
@@ -135,6 +151,9 @@ nnoremap <S-down> 12j12<C-e>
 " <C-]> is mapped to ü
 nnoremap <C-]> :execute "vimgrep /\\<" . expand("<cword>") . "\\>/j **/*.".expand("%:e") <Bar> cw<CR>
 
+" search in whole directory for occurences of the searched word
+nnoremap </> :execute "vimgrep /\\<\\>/j **/*.".expand("%:e") <Bar> cw <left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+
 " search in current file for occurences of the word under the cursor
 " <]> is mapped to ä
 nnoremap <]> :execute "vimgrep /\\<" . expand("<cword>") . "\\>/j ".expand("%") <Bar> cw<CR>
@@ -207,6 +226,19 @@ autocmd CursorMoved,CursorMovedI * :set nocursorcolumn
  "cursor moves
 ":autocmd CursorHold,CursorHoldI,CursorMoved,CursorMovedI * :call PlaceLineSign(0)
 ":autocmd BufRead * :call PlaceLineSign(1)
+
+" ---------------------------------------------------------
+
+
+
+" =========================================================
+" = Plugin: EasyMotion                                    =
+" =========================================================
+
+map <Leader><Leader> <Plug>(easymotion-prefix)
+
+map  <Leader><Leader>q <Plug>(easymotion-sn)
+omap <Leader><Leader>q <Plug>(easymotion-tn)))
 
 " ---------------------------------------------------------
 
