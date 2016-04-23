@@ -5,11 +5,22 @@
 " #########################################################
 
 
+" =========================================================
+" = cholorscheme settings                                =
+" =========================================================
+
+set t_Co=256
+colorscheme dreign
+
+" ---------------------------------------------------------
+
+
 
 " =========================================================
 " = Plugin-Installer: Pathogen                            =
 " =========================================================
 
+set nocp
 execute pathogen#infect()
 filetype plugin indent on
 set sessionoptions-=options
@@ -21,6 +32,13 @@ set sessionoptions-=options
 " =========================================================
 " = General settings                                      =
 " =========================================================
+
+" Because \ is rather impractical on non-US keyboards, remap leader
+"let mapleader="´"
+
+" unmap deleting with c/cc
+nnoremap cc <NOP>
+nnoremap c <NOP>
 
 " If this many milliseconds nothing is typed the swap file will be
 " written to disk (see |crash-recovery|).  Also used for the
@@ -66,8 +84,6 @@ hi MatchParen cterm=bold ctermbg=white ctermfg=red
 " Syntax highlighting
 :syntax enable 
 
-" Custom color scheme
-:colorscheme dreign
 
 " ---------------------------------------------------------
 
@@ -237,8 +253,10 @@ autocmd CursorMoved,CursorMovedI * :set nocursorcolumn
 
 map <Leader><Leader> <Plug>(easymotion-prefix)
 
-map  <Leader><Leader>q <Plug>(easymotion-sn)
-omap <Leader><Leader>q <Plug>(easymotion-tn)))
+map  ´´w <Plug>(easymotion-sn)
+omap ´´w <Plug>(easymotion-tn)
+map  ´´c <Plug>(easymotion-s)
+omap ´´c <Plug>(easymotion-s)
 
 " ---------------------------------------------------------
 
@@ -250,6 +268,8 @@ omap <Leader><Leader>q <Plug>(easymotion-tn)))
 
 :filetype on
 :filetype plugin on
+
+nnoremap ´c :call NERDComment(0, "toggle")<CR>
 
 " ---------------------------------------------------------
 
