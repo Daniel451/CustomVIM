@@ -133,6 +133,20 @@ map <C-left> <C-W>h
 map <C-up> <C-W>k
 map <C-down> <C-W>j
 
+" move one word left/right
+inoremap <C-Left>   <C-\><C-O>b
+nnoremap <C-Left>   b
+
+inoremap <C-Right>  <C-\><C-O>w
+nnoremap <C-Right>  w
+
+" move to beginning and end of the line
+inoremap <S-Left>   <C-\><C-O><Home>
+nnoremap <S-Left>   <Home>
+
+inoremap <S-Right>  <C-\><C-O><End>
+nnoremap <S-Right>  <End>
+
 " move lines up/down
 nnoremap <A-down> :m .+1<CR>==
 nnoremap <A-up> :m .-2<CR>==
@@ -251,12 +265,26 @@ autocmd CursorMoved,CursorMovedI * :set nocursorcolumn
 " = Plugin: EasyMotion                                    =
 " =========================================================
 
+" next/previous search result for word search is Tab / Shift-Tab
+
+" plugin prefix
 map <Leader><Leader> <Plug>(easymotion-prefix)
 
+" searches for a word
 map  ´´w <Plug>(easymotion-sn)
 omap ´´w <Plug>(easymotion-tn)
+
+" searches for a character
 map  ´´c <Plug>(easymotion-s)
 omap ´´c <Plug>(easymotion-s)
+
+" searches for a character - multi-window
+map  ´´<s-c> <plug>(easymotion-overwin-f)
+nmap ´´<S-c> <Plug>(easymotion-overwin-f)
+"
+" searches for a word - multi-window
+map  ´´<S-w> <Plug>(easymotion-overwin-w)
+nmap ´´<S-w> <Plug>(easymotion-overwin-w)
 
 " ---------------------------------------------------------
 
@@ -270,6 +298,7 @@ omap ´´c <Plug>(easymotion-s)
 :filetype plugin on
 
 nnoremap ´c :call NERDComment(0, "toggle")<CR>
+vnoremap ´c :call NERDComment(0, "toggle")<CR>
 
 " ---------------------------------------------------------
 
